@@ -66,6 +66,8 @@ body {
     margin: 0;
     letter-spacing: 0.47px;
     font-family: 'Nunito Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
   }
   .cta-btn {
     display: inline-block;
@@ -75,17 +77,45 @@ body {
     font-size: 1.13rem;
     font-weight: 700;
     padding: 18px 40px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 2px solid #AA956F;
     text-decoration: none;
     letter-spacing: 1.2px;
-    box-shadow: none;
-    transition: background 0.2s, color 0.2s, border 0.19s;
+    box-shadow: 0 2px 22px rgba(170,149,111, 0.04);
+    position: relative;
+    transition:
+      background 0.36s cubic-bezier(.68,.03,.35,.97),
+      color 0.26s,
+      box-shadow 0.23s,
+      border 0.16s;
+    overflow: hidden;
   }
-  .cta-btn:hover, .cta-btn:focus {
-    background: #AA956F;
+  
+  .cta-btn:hover,
+  .cta-btn:focus {
+    background: linear-gradient(94deg, #AA956F 0%, #F5F3F0 100%);
     color: #003057;
-    border: 2px solid #003057;
+    border: 2px solid #AA956F;
+    box-shadow: 0 3px 28px 0 rgba(170,149,111,0.13), 0 0.5px 12px rgba(0,48,87,0.09);
+    text-shadow: 0 1px 6px #fff, 0 0px 0.5px #FAFAFA;
+  }
+  
+  .cta-btn::after {
+    content: '';
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    bottom: 13px;
+    height: 2.5px;
+    background: linear-gradient(90deg, #bba16f 30%, #f4e9d9 100%);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.42s cubic-bezier(.73,.09,.29,.98);
+    pointer-events: none;
+  }
+  .cta-btn:hover::after,
+  .cta-btn:focus::after {
+    opacity: 1;
   }
   @media (max-width: 700px) {
     .ad-wrapper { min-height:120vw; max-width:99vw; }
@@ -94,6 +124,20 @@ body {
       max-width: 98vw;
       gap: 26px;
     }
+    .headline{
+        padding: 2.5em 0 2.5em 0;
+        font-size: 2em!important;
+    }
+    .ad-bg-img {
+        filter: brightness(0.97) saturate(0.82);
+      }
+    .subline{
+        margin: 0 0 4em 0;        
+        padding: 0em 0.5em 0em 0.5em;
+        font-size: 1.3em!important;
+        background: rgba(255,255,255,0.55);
+        letter-spacing: 0.47px;
+        }
     .logo-box { font-size:0.97rem; padding:6px 10px 7px 10px;}
     .headline { font-size: 1.08rem;}
     .subline { font-size: 0.96rem;}
