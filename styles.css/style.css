@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    background: #F5F3F0;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    color: #222222;
+  }
+  .ad-wrapper {
+    width: 100%;
+    max-width: 920px;
+    margin: 48px auto;
+    border-radius: 18px;
+    position: relative;
+    min-height: 340px;
+    box-shadow: 0 8px 36px rgba(0,0,0,0.09);
+    background: #FFF;
+    overflow: hidden;
+  }
+  .ad-bg-img {
+    position: absolute;
+    inset: 0;
+    background: 
+    linear-gradient(90deg,rgba(0,48,87,0.14) 0%, rgba(245,243,240,0.94) 55%,rgba(245,243,240,0.84) 90%,rgba(245,243,240,0.5) 100%),
+      url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    z-index: 1;
+  }
+  .ad-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 64px 60px 56px; /* PIÙ SPAZIO rispetto a prima */
+    max-width: 520px;
+    min-height: 340px;
+    /* Spazi tra i figli con gap */
+    gap: 42px;
+    filter: brightness(0.92) saturate(0.88);
+
+  }
+  .logo-box {
+    background: #f5f3f0;
+    color: #003057;
+    border-radius: 7px;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.12rem;
+    padding: 10px 34px 10px 27px;
+    margin-bottom: 0; /* Uso gap nel container */
+    letter-spacing: 0.7px;
+    box-shadow: 0px 2px 9px 0px rgba(34,48,87,0.04);
+  }
+  .headline {
+    font-family: 'Domine', serif;
+    color: #003057;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.15;
+    letter-spacing: 0.3px;
+    text-align: left;
+  }
+  .subline {
+    color: #AA956F;
+    font-size: 1.09rem;
+    font-style: italic;
+    margin: 0;
+    letter-spacing: 0.47px;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: #003057;
+    color: #fff;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    font-size: 1.13rem;
+    font-weight: 700;
+    padding: 18px 40px;
+    border-radius: 8px;
+    border: 2px solid #AA956F;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+    box-shadow: none;
+    transition: background 0.2s, color 0.2s, border 0.19s;
+  }
+  .cta-btn:hover, .cta-btn:focus {
+    background: #AA956F;
+    color: #003057;
+    border: 2px solid #003057;
+  }
+  @media (max-width: 700px) {
+    .ad-wrapper { min-height:120vw; max-width:99vw; }
+    .ad-content { 
+      padding: 32px 6vw 38px 5vw;
+      max-width: 98vw;
+      gap: 26px;
+    }
+    .logo-box { font-size:0.97rem; padding:6px 10px 7px 10px;}
+    .headline { font-size: 1.08rem;}
+    .subline { font-size: 0.96rem;}
+    .cta-btn { padding:12px 11vw; font-size:0.99rem;}
+  }
